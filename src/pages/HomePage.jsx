@@ -1,0 +1,8 @@
+export default function HomePage() {
+    return(
+        <>
+            <h1>Bool Movies</h1>
+            <h2>The nerdest movie community</h2>
+        </>
+    )
+}

@@ -1,11 +1,23 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+import HomePage from './pages/HomePage'
+import DetailsPage from './pages/DetailsPage'
+import DefaultLayout from './layouts/Defaultlayout'
 
 function App() {
-
-  console.log("prova log")
-
   return (
-   <h1>Provaaaaa</h1>
+    <>
+      {/*Mappatura rotte*/}
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path='/books/:id' element={<DetailsPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
