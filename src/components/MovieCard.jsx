@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 // creazione componente Header
 const MovieCard = () => {
     return (
-        <div>
+        <div className="movie-card">
             <img src="https://tse2.mm.bing.net/th/id/OIP.vnJImFIy1GEoBBAjyZ-tfQHaK-?rs=1&pid=ImgDetMain&o=7&rm=3" alt="titolo film" />
             <div>
                 <h5 className="card-title">Titolo Film</h5>

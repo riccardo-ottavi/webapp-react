@@ -5,7 +5,11 @@ export default function HomePage() {
         <>
             <h1>Bool Movies</h1>
             <h2>The nerdest movie community</h2>
-            <div>
+            <div className="container">
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
                 <MovieCard />
             </div>
         </>
