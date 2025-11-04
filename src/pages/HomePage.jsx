@@ -1,6 +1,7 @@
 import MovieCard from "../components/MovieCard"
 import axios from "axios"
 
+
 import  { useState, useEffect } from "react"
 
 export default function HomePage() {
@@ -18,7 +19,7 @@ export default function HomePage() {
     const renderMovies = () => {
         return movies.map(movie => {
             return (
-                <div className="col" key={movie.id}>
+                <div key={movie.id}>
                     <MovieCard movieProp={movie} />
                 </div>
             )
