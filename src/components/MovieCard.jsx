@@ -2,17 +2,27 @@
 import { Link } from "react-router-dom"
 
 // creazione componente Header
-const MovieCard = () => {
+const MovieCard = ({ movieProp }) => {
+
+    // destrutturiamo oggetto passato da props
+    const { id, title, director, genre, abstract, image, release_year } = movieProp;
+
     return (
-        <div className="movie-card">
-            <img src="https://tse2.mm.bing.net/th/id/OIP.vnJImFIy1GEoBBAjyZ-tfQHaK-?rs=1&pid=ImgDetMain&o=7&rm=3" alt="titolo film" />
+        <div>
+            <img src={image} alt={title}/>
             <div>
-                <h5 className="card-title">Titolo Film</h5>
-                <address><i>Regista</i></address>
+                <h5>{title}</h5>
+                <address><i>{director}</i></address>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quam! Quaerat molestias autem hic neque quia quod asperiores, vel veniam mollitia repellat illo repudiandae praesentium qui deserunt velit adipisci explicabo!
+                    {abstract}
                 </p>
-                <Link to="movies/1">
+                <p>
+                    {genre}
+                </p>
+                <p>
+                    {release_year}
+                </p>
+                <Link to={`movies/${id}`}>
                     See more
                 </Link>
             </div>
