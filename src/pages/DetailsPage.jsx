@@ -46,6 +46,7 @@ const DetailsPage = () => {
 
     return (
         <>
+        <div className="review-card">
             <header>
                 <div>
                     <img src={movie?.image} alt={movie?.title} />
@@ -64,6 +65,7 @@ const DetailsPage = () => {
             <footer >
                 <Link to="/">Back to home</Link>
             </footer>
+        </div>
 
         </>
 

@@ -2,7 +2,7 @@ import MovieCard from "../components/MovieCard"
 import axios from "axios"
 
 
-import  { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 
 export default function HomePage() {
 
@@ -19,7 +19,7 @@ export default function HomePage() {
     const renderMovies = () => {
         return movies.map(movie => {
             return (
-                <div key={movie.id}>
+                <div key={movie.id}  className="movie-card">
                     <MovieCard movieProp={movie} />
                 </div>
             )
@@ -29,13 +29,14 @@ export default function HomePage() {
     // faccio partire la chiamata a primo montaggio comp
     useEffect(fetchMovies, []);
 
-     return (
+    return (
         <>
             <h1>Bool Movies</h1>
             <h2><i>The nerdest movie community</i></h2>
-            <div>
+            <div className="container">
                 {renderMovies()}
             </div>
+
         </>
 
     )
