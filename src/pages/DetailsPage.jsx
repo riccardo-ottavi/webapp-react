@@ -7,6 +7,9 @@ import { Link, useParams, useNavigate } from "react-router-dom"
 // import state e effetc
 import { useState, useEffect } from "react"
 
+// import hook per contesto
+import { useGlobal } from "../contexts/GlobalContext"
+
 // import comp singola review
 import ReviewCard from "../components/ReviewCard"
 
@@ -24,14 +27,18 @@ const DetailsPage = () => {
     // recuperiamo il parametro dinamico
     const { id } = useParams();
 
+    const { setIsLoading } = useGlobal();
+
     // prepariamo funzione per la chiamata axios
     const fecthMovie = () => {
+        setIsLoading(true);
         axios.get('http://localhost:3000/movies/' + id)
             .then(response => { setMovie(response.data) })
             .catch(error => {
                 console.log(error)
                
             })
+            .finally(() => { setIsLoading(false) })
     }
 
     // faccio partire la chiamata a primo montaggio comp

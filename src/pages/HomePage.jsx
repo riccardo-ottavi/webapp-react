@@ -3,17 +3,20 @@ import axios from "axios"
 
 
 import { useState, useEffect } from "react"
+import { useGlobal } from "../contexts/GlobalContext";
 
 
 export default function HomePage() {
 
     const [movies, setMovies] = useState([]);
-
+    const { setIsLoading } = useGlobal();
     // prepariamo funzione per la chiamata axios
     const fetchMovies = () => {
+        setIsLoading(true);
         axios.get('http://localhost:3000/movies')
             .then(response => { setMovies(response.data) })
             .catch(error => { console.log(error) })
+            .finally(() => setIsLoading(false))
     }
 
     // funzione di generazione istanze libri
