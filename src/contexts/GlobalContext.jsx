@@ -4,7 +4,7 @@ import { createContext, useContext, useState } from "react";
 const GlobalContext = createContext();
 
 //creazione
-function GlobalContext({ children }){
+function GlobalProvider({ children }){
     //gestione loader
     const [isLoading, setIsLoading] = useState(0);
     return(
