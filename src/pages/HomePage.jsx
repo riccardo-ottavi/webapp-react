@@ -3,6 +3,7 @@ import axios from "axios"
 
 
 import { useState, useEffect } from "react"
+import Loader from "../components/Loader";
 
 export default function HomePage() {
 
@@ -38,7 +39,7 @@ export default function HomePage() {
             <div className="container">
                 {renderMovies()}
             </div>
-
+            <Loader />
         </>
 
     )
