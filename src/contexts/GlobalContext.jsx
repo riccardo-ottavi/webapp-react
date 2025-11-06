@@ -6,7 +6,7 @@ const GlobalContext = createContext();
 //creazione
 function GlobalProvider({ children }){
     //gestione loader
-    const [isLoading, setIsLoading] = useState(0);
+    const [isLoading, setIsLoading] = useState(false);
     return(
         <GlobalContext.Provider
             value={{
