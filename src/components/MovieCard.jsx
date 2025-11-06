@@ -22,7 +22,7 @@ const MovieCard = ({ movieProp }) => {
                 <p>
                     {release_year}
                 </p>
-                <Link to={`movies/${id}`}>
+                <Link to={`movies/${id}`} className="btn">
                     See more
                 </Link>
             </div>

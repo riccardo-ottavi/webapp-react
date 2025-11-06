@@ -31,8 +31,10 @@ export default function HomePage() {
 
     return (
         <>
-            <h1>Bool Movies</h1>
-            <h2><i>The nerdest movie community</i></h2>
+            <div>
+                <h1>Bool Movies</h1>
+                <h2><i>The nerdest movie community</i></h2>
+            </div>
             <div className="container">
                 {renderMovies()}
             </div>

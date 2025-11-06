@@ -18,7 +18,7 @@ const DetailsPage = () => {
     // creiamo istanza di Navigate
     const redirect = useNavigate();
 
-    // prepariamo var di stato libro
+    // prepariamo var di stato movie
     const [movie, setMovie] = useState();
 
     // recuperiamo il parametro dinamico
@@ -68,7 +68,7 @@ const DetailsPage = () => {
                 <ReviewForm idProp={id} reloadReviews={fecthMovie} />
             </section>
             <footer >
-                <Link to="/">Back to home</Link>
+                <Link to="/" className="btn">Back to home</Link>
             </footer>
         </div>
 
